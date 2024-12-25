@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Gadget Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .auth-container {
+            width: 400px; 
+            padding: 40px; 
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .auth-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .auth-container input {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            box-sizing: border-box;
+        }
+
+        .auth-container button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            border: none;
+            border-radius: 25px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .auth-container button:hover {
+            background: linear-gradient(to right, #0072ff, #00c6ff);
+            transform: scale(1.05);
+        }
+
+        .auth-container p {
+            margin-top: 20px;
+            color: #666;
+        }
+
+        .auth-container a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+
+        .auth-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="auth-container">
+        <h1>Welcome Back!</h1>
+        <form id="login-form">
+            <input type="email" placeholder="Email" name="email" id="email" required>
+            <input type="password"  placeholder="Password" name="password" id="password" required>
+            <button type="submit"><i class="fas fa-sign-in-alt"></i> Login</button>
+        </form>
+        <p>Don't have an account? <a  id="sign-up">Sign up</a></p>
+    </div>
+
+    <script>
+        const form = document.getElementById("login-form");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("Logged in successfully!");
+            window.location.href = "home page/inde.html";
+        });
+    </script>
+    <script>
+        const sign = document.getElementById("sign-up");
+        sign.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.location.href = "sign_up.html";
+        });
+    </script>
+</body>
+</html>
