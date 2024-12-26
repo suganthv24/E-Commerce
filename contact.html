@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Electronics Gadgets E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #0073e6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        h1{
+            color: #f5f5f5;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #0073e6;
+            color: #fff;
+            padding: 10px;
+            
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #0073e6;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        form label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        form input, form textarea, form button {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+    </nav>
+    <main>
+        <section>
+            <h2>Get in Touch</h2>
+            <p>If you have any questions or feedback, feel free to reach out to us by filling out the form below.</p>
+            <form action="/submit_contact_form" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section>
+            <h2>Our Address</h2>
+            <p>123 E-Commerce St.<br>
+            Online City, Web 12345</p>
+        </section>
+        <section>
+            <h2>Customer Service</h2>
+            <p>For immediate assistance, you can contact us via:</p>
+            <ul>
+                <li>Email: <a href="mailto:support@electronicsgadgets.com">support@electronicsgadgets.com</a></li>
+                <li>Phone: (123) 456-7890</li>
+                <li>Business Hours: Monday to Friday, 9:00 AM - 6:00 PM</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Follow Us</h2>
+            <p>Stay connected with us on social media for the latest updates and promotions:</p>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024  Zaporia Electronics Gadgets. All rights reserved.</p>
+        <p>Developed with passion for technology.</p>
+    </footer>
+</body>
+</html>

@@ -10,10 +10,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e0f7fa;
+            background-color: #ffffff;
         }
         header {
-            background-color: #007bb5;
+            background-color: #0073e6;
             color: #fff;
             padding: 20px;
             text-align: center;
@@ -24,15 +24,13 @@
         .navbar {
             display: flex;
             justify-content: center;
-            background-color: #007bb5;
+            background-color:#0073e6;
             color: #fff;
             padding: 10px;
-        }
-        nav {
-            background-color: #007bb5;
-            color: #fff;
             text-align: center;
-            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         nav a {
             color: #fff;
@@ -40,14 +38,13 @@
             font-weight: bold;
         }
         nav a:hover {
-            text-decoration: underline;
+            transform: translateX(5px);
         }
 
         .carousel {
             position: relative;
             max-width: 1500px;
             max-height: 500px;
-            margin: 20px auto;
         }
         .carousel-inner {
             display: flex;
@@ -67,12 +64,13 @@
             border: none;
             padding: 10px;
             cursor: pointer;
+            width: 40px;
         }
         .carousel-control-prev {
-            left: 10px;
+            left: 5px;
         }
         .carousel-control-next {
-            right: 10px;
+            right: 5px;
         }
     </style>
 </head>
@@ -83,8 +81,8 @@
     <nav class="navbar">
         <a class="navbar-brand" href="home.html">Home</a>
         <a class="navbar-brand" href="products.html">Products</a>
-        <a class="navbar-brand" href="#">Contact</a>
-        <a class="navbar-brand" href="#">About</a>
+        <a class="navbar-brand" href="contact.html">Contact</a>
+        <a class="navbar-brand" href="about.html">About</a>
     </nav>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
