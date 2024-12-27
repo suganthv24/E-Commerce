@@ -16,14 +16,29 @@
         }
         header {
             background-color: #0073e6;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;    
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header div {
+            font-size: 1.5rem;
+            font-weight: bold;
+            align-items: right;
+        }
+        header img {
+            max-width: 150px;
+        }
+        header .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
         }
         .navbar {
             display: flex;
             justify-content: center;
-            background-color: #0073e6;
+            background-color: #005bb5;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -31,14 +46,16 @@
             top: 0;
             z-index: 1000;
         }
-        .navbar a {
-            color: white;
-            margin: 0 15px;
+        nav a {
+            color: #fff;
+            margin: 0 20px;
             font-weight: bold;
             text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
         }
-        .navbar a:hover {
-            text-decoration: underline;
+        nav a:hover {
+            transform: translateY(-2px);
+            color: #ffdd00;
         }
         main {
             padding: 20px;
@@ -114,7 +131,8 @@
 </head>
 <body>
     <header>
-        <h1>About Us</h1>
+        <img src="images/Zaporia.png" alt="Zaporia Logo">
+        <div><h1>About Us</h1></div>
     </header>
     <nav class="navbar">
         <a href="home.html">Home</a>
@@ -137,22 +155,22 @@
             <h2>Our Team</h2>
             <div class="team">
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/250" alt="Team Member 1">
+                    <img src="images/sathish.jpg" alt="Team Member 1" width="250" height="250">
                     <h3>Sathish</h3>
                     <p>Founder & CEO</p>
                 </div>
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/250" alt="Team Member 2">
+                    <img src="images/perumal.jpg" alt="Team Member 2" width="250" height="250">
                     <h3>Saravana Perumal</h3>
                     <p>Chief Technology Officer</p>
                 </div>
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/250" alt="Team Member 3">
+                    <img src="images/sowmya.jpg" alt="Team Member 3" wigth="250" height="250">
                     <h3>Sowmya</h3>
                     <p>Marketing Director</p>
                 </div>
                 <div class="team-member">
-                    <img src="https://via.placeholder.com/250" alt="Team Member 4">
+                    <img src="images/suganth.jpg" alt="Team Member 4" width="250" height="250">
                     <h3>Suganth</h3>
                     <p>Operations Manager</p>
                 </div>
