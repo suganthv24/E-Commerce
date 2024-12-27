@@ -15,14 +15,24 @@
         header {
             background-color: #0073e6;
             color: #fff;
-            padding: 20px;
+            padding: 10px 20px;
             text-align: center;
-            
+    
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            max-width: 150px;
+        }
+        header .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
         }
         .navbar {
             display: flex;
             justify-content: center;
-            background-color: #0073e6;
+            background-color: #005bb5;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -34,9 +44,12 @@
             color: #fff;
             margin: 0 20px;
             font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
         }
         nav a:hover {
-            text-decoration: underline;
+            transform: translateY(-2px);
+            color: #ffdd00;
         }
         .container {
             padding: 20px;
@@ -106,6 +119,7 @@
 </head>
 <body>
     <header>
+        <img src="images/Zaporia.png" alt="Zaporia Logo">
         <input type="text" placeholder="Search for products..." class="form-control" style="max-width: 400px; margin: 10px auto;">
     </header>
     <nav class="navbar">
