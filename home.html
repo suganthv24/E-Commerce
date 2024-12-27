@@ -15,16 +15,24 @@
         header {
             background-color: #0073e6;
             color: #fff;
-            padding: 20px;
+            padding: 10px 20px;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+    
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            max-width: 150px;
+        }
+        header .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
         }
         .navbar {
             display: flex;
             justify-content: center;
-            background-color:#0073e6;
+            background-color: #005bb5;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -36,24 +44,26 @@
             color: #fff;
             margin: 0 20px;
             font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
         }
         nav a:hover {
-            transform: translateX(5px);
+            transform: translateY(-2px);
+            color: #ffdd00;
         }
-
         .carousel {
             position: relative;
             max-width: 1500px;
-            max-height: 500px;
+            margin: 20px auto;
         }
         .carousel-inner {
             display: flex;
             overflow: hidden;
             border-radius: 10px;
         }
-        .carousel-item {
-            min-width: 100%;
-            transition: transform 0.5s ease-in-out;
+        .carousel-item img {
+            width: 100%;
+            height: auto;
         }
         .carousel-control-prev, .carousel-control-next {
             position: absolute;
@@ -72,11 +82,29 @@
         .carousel-control-next {
             right: 5px;
         }
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+            }
+            header img {
+                margin-bottom: 10px;
+            }
+            header .search-bar {
+                margin: 10px 0;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <input type="text" placeholder="Search for products..." class="form-control" style="max-width: 400px; margin: 10px auto;">
+        <img src="images/Zaporia.png" alt="Zaporia Logo">
+        <div class="search-bar">
+            <label for="search" class="sr-only">Search for products</label>
+            <input id="search" type="text" placeholder="Search for products..." class="form-control">
+        </div>
     </header>
     <nav class="navbar">
         <a class="navbar-brand" href="home.html">Home</a>
@@ -89,18 +117,16 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://via.placeholder.com/800x300" class="d-block w-100" alt="Slide 1">
+                <img src="images/christmas.jpg" class="d-block w-100" alt="christmas">
             </div>
             <div class="carousel-item">
-                <img src="https://via.placeholder.com/800x300" class="d-block w-100" alt="Slide 2">
+                <img src="images/phone.jpg" class="d-block w-100" alt="phone">
             </div>
             <div class="carousel-item">
-                <img src="https://via.placeholder.com/800x300" class="d-block w-100" alt="Slide 3">
+                <img src="images/new year.jpg" class="d-block w-100" alt="new year">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -112,6 +138,9 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

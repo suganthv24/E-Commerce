@@ -187,7 +187,7 @@
             <p class="price">$399</p>
             <p class="rating">★★★★☆</p>
             <button>Add to Cart</button>
-            <button>Buy Now</button>
+            <button> Buy Now </button>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/250" alt="Gadget 9">
@@ -196,7 +196,7 @@
             <p class="price">$149</p>
             <p class="rating">★★★★☆</p>
             <button>Add to Cart</button>
-            <button>Buy Now</button>
+            <button> Buy Now </button>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/250" alt="Gadget 10">
@@ -205,7 +205,7 @@
             <p class="price">$129</p>
             <p class="rating">★★★★☆</p>
             <button>Add to Cart</button>
-            <button>Buy Now</button>
+            <button> Buy Now </button>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/250" alt="Gadget 11">
@@ -214,7 +214,7 @@
             <p class="price">$99</p>
             <p class="rating">★★★★☆</p>
             <button>Add to Cart</button>
-            <button>Buy Now</button>
+            <button> Buy Now </button>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/250" alt="Gadget 12">
@@ -223,7 +223,7 @@
             <p class="price">$29</p>
             <p class="rating">★★★★☆</p>
             <button>Add to Cart</button>
-            <button>Buy Now</button>
+            <button> Buy Now </button>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/250" alt="Gadget 13">
@@ -232,7 +232,7 @@
             <p class="price">$49</p>
             <p class="rating">★★★★☆</p>
             <button>Add to Cart</button>
-            <button>Buy Now</button>
+            <button> Buy Now </button>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/250" alt="Gadget 14">
@@ -241,7 +241,7 @@
             <p class="price">$199</p>
             <p class="rating">★★★★☆</p>
             <button>Add to Cart</button>
-            <button>Buy Now</button>
+            <button> Buy Now </button>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/250" alt="Gadget 15">
@@ -250,7 +250,7 @@
             <p class="price">$299</p>
             <p class="rating">★★★★☆</p>
             <button>Add to Cart</button>
-            <button>Buy Now</button>
+            <button> Buy Now </button>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/250" alt="Gadget 16">
@@ -259,7 +259,7 @@
             <p class="price">$149</p>
             <p class="rating">★★★★☆</p>
             <button>Add to Cart</button>
-            <button>Buy Now</button>
+            <button> Buy Now </button>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/250" alt="Gadget 17">
@@ -268,7 +268,7 @@
             <p class="price">$49</p>
             <p class="rating">★★★★☆</p>
             <button>Add to Cart</button>
-            <button>Buy Now</button>
+            <button> Buy Now </button>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/250" alt="Gadget 18">
@@ -277,7 +277,7 @@
             <p class="price">$299</p>
             <p class="rating">★★★★☆</p>
             <button>Add to Cart</button>
-            <button>Buy Now</button>
+            <button> Buy Now </button>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/250" alt="Gadget 19">
@@ -286,7 +286,7 @@
             <p class="price">$199</p>
             <p class="rating">★★★★☆</p>
             <button>Add to Cart</button>
-            <button>Buy Now</button>
+            <button> Buy Now </button>
         </div>
         <div class="product">
             <img src="https://via.placeholder.com/250" alt="Gadget 20">
@@ -294,9 +294,9 @@
             <p>Control your appliances remotely.</p>
             <p class="price">$29</p>
             <p class="rating">★★★★☆</p>
-            <button>Add to Cart</button>
-            <button>Buy Now</button>
-    </div>
+            <button id="add">Add to Cart</button>
+            <button id="buy"> Buy Now </button>
+        </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -304,9 +304,15 @@
         const buttons = document.querySelectorAll('.product button');
 
         buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                alert('Added to cart!');
-            });
+            if (button.textContent.includes('Add to Cart')) {
+                button.addEventListener('click', () => {
+                    alert('Added to cart!');
+                });
+            } else if (button.textContent.includes('Buy Now')) {
+                button.addEventListener('click', () => {
+                    alert('Buy now');
+                });
+            }
         });
     </script>
 </body>
